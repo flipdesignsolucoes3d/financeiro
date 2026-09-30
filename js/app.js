@@ -1,5 +1,5 @@
 // Financeiro Flip (Flip Design & Soluções 3D)
-const VERSAO = '1.0.0';
+const VERSAO = '1.0.1';
 
 /* ===================== Utilidades ===================== */
 const $ = (s, el = document) => el.querySelector(s);
