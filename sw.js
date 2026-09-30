@@ -4,7 +4,7 @@ const CACHE = 'flip-v1.0.0';
 const ARQUIVOS = [
   './', './index.html', './css/style.css', './manifest.json',
   './js/config.js', './js/api.js', './js/lock.js', './js/charts.js', './js/app.js',
-  './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'
+  './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/logo-flip.png'
 ];
 
 self.addEventListener('install', e => {

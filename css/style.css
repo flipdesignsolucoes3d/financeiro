@@ -86,7 +86,26 @@ h2 { font-size: 1.2rem; }
 .porta-painel .ola { text-align: center; color: var(--txt-3); font-size: .9rem; margin: 0 0 20px; }
 @keyframes painel-sobe { from { transform: translateY(40px); opacity: 0; } }
 
+/* No computador: logo e cartão de login juntos no centro da tela
+   (no celular continua o jeito de gaveta, colado embaixo, que é melhor no toque) */
+@media (min-width: 520px) {
+  .porta { justify-content: center; }
+  .porta-topo { flex: 0; padding: 32px 24px 24px; }
+  .porta-fundo { inset: 0; height: 100%; }
+  .porta-painel {
+    margin: 0 auto 32px; border-radius: 28px; border-bottom: 1px solid var(--borda-forte);
+    padding-bottom: 26px; max-width: 420px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
+  }
+  @keyframes painel-sobe { from { transform: translateY(40px); opacity: 0; } }
+}
+
 .logo { width: 84px; height: auto; overflow: visible; filter: drop-shadow(0 6px 18px rgba(125, 201, 23, .2)); }
+.logo-flip {
+  width: 130px; height: auto; filter: drop-shadow(0 8px 22px rgba(125, 201, 23, .25));
+  animation: logo-entra .8s cubic-bezier(.2, .8, .2, 1) both;
+}
+@keyframes logo-entra { from { opacity: 0; transform: translateY(10px) scale(.92); } }
 .logo-traco { fill: none; stroke: url(#ouro-logo); stroke-width: 5.4; stroke-linejoin: miter;
   stroke-dasharray: 1; stroke-dashoffset: 1; animation: logo-desenha 1.4s cubic-bezier(.6, 0, .2, 1) forwards; }
 .logo-friso { fill: none; stroke: var(--bg); stroke-width: .8; opacity: 0; animation: logo-aparece .5s 1.2s forwards; }

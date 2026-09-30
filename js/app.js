@@ -144,24 +144,10 @@ function confirmar(texto, { ok = 'Excluir', perigo = true } = {}) {
 }
 
 /* ===================== Porta (login, trava) ===================== */
-// Logo Flip desenhada em SVG, com barras subindo no canto (tema financeiro).
+// Logo oficial da Flip (folha "f"), com o nome da marca embaixo.
 function logoMarca() {
-  const tracos = 'M90 15.2H30V112.8H48M30 62H78';
   return `
-    <svg class="logo" viewBox="0 0 118 128" aria-label="Flip Design & Soluções 3D">
-      <defs>
-        <linearGradient id="ouro-logo" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#B5E96E"/><stop offset=".5" stop-color="#7DC917"/><stop offset="1" stop-color="#4A7F0C"/>
-        </linearGradient>
-      </defs>
-      <path class="logo-traco" d="${tracos}" pathLength="1"/>
-      <path class="logo-friso" d="${tracos}"/>
-      <g class="logo-barras">
-        <rect x="78" y="106" width="6" height="15.2"/>
-        <rect x="89" y="95" width="6" height="26.2"/>
-        <rect x="100" y="82" width="6" height="39.2"/>
-      </g>
-    </svg>`;
+    <img class="logo-flip" src="icons/logo-flip.png" alt="Flip Design & Soluções 3D">`;
 }
 
 function mostrarPorta(html) {
